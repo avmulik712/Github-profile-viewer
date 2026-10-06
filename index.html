@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GitHub Profile Viewer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            GitHub Profile Viewer
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">GitHub</a>
+        </nav>
+    </header>
+
+
+    <!-- Main Section -->
+    <main>
+
+        <section class="hero">
+
+            <h1>Explore GitHub Profiles</h1>
+
+            <p>
+                Search for any GitHub user and view their profile,
+                followers, bio and repositories.
+            </p>
+
+            <!-- Search Box -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter GitHub username"
+                >
+
+                <button onclick="getProfile()">
+                    Search Profile
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Profile Result -->
+        <section id="result" class="profile-section">
+
+            <!-- JavaScript will add profile information here -->
+
+            <div class="welcome">
+
+                <div class="github-icon">
+                    ◉
+                </div>
+
+                <h2>Find a GitHub Profile</h2>
+
+                <p>
+                    Enter a GitHub username above to get started.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            GitHub Profile Viewer | Web Technology Project
+        </p>
+
+        <p>
+            Powered by GitHub Public API
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

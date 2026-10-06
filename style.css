@@ -1,0 +1,746 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+/* Background Glow */
+
+body::before {
+    content: "";
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    background: #238636;
+
+    border-radius: 50%;
+
+    filter: blur(150px);
+    opacity: 0.18;
+
+    top: 100px;
+    left: -150px;
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 400px;
+    height: 400px;
+
+    background: #58a6ff;
+
+    border-radius: 50%;
+
+    filter: blur(150px);
+    opacity: 0.15;
+
+    right: -150px;
+    bottom: 50px;
+
+    z-index: -1;
+}
+
+
+/* Header */
+
+header {
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    background: rgba(13, 17, 23, 0.75);
+
+    border-bottom: 1px solid #30363d;
+
+    backdrop-filter: blur(15px);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+
+    background: linear-gradient(
+        90deg,
+        #58a6ff,
+        #a371f7
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #c9d1d9;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #58a6ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* Main */
+
+main {
+    min-height: calc(100vh - 145px);
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+
+    padding: 100px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 52px;
+
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #58a6ff,
+        #a371f7
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #8b949e;
+
+    font-size: 17px;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+
+/* Search Box */
+
+.search-box {
+    margin: 40px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    max-width: 600px;
+}
+
+
+/* Input */
+
+.search-box input {
+    width: 390px;
+
+    padding: 16px 20px;
+
+    background: #161b22;
+
+    color: white;
+
+    border: 1px solid #30363d;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.search-box input::placeholder {
+    color: #6e7681;
+}
+
+.search-box input:focus {
+    border-color: #58a6ff;
+
+    box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+
+/* Search Button */
+
+.search-box button {
+    padding: 16px 24px;
+
+    background: linear-gradient(
+        135deg,
+        #238636,
+        #2ea043
+    );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 5px 20px rgba(46, 160, 67, 0.25);
+}
+
+.search-box button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(46, 160, 67, 0.4);
+}
+
+.search-box button:active {
+    transform: translateY(0);
+}
+
+
+/* Profile Section */
+
+.profile-section {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 30px auto 70px;
+}
+
+
+/* Welcome Card */
+
+.welcome {
+    background: rgba(22, 27, 34, 0.75);
+
+    border: 1px solid #30363d;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.welcome:hover {
+    border-color: #58a6ff;
+
+    transform: translateY(-4px);
+}
+
+
+/* GitHub Icon */
+
+.github-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #21262d,
+        #30363d
+    );
+
+    font-size: 40px;
+
+    box-shadow:
+        0 0 30px rgba(88, 166, 255, 0.15);
+}
+
+.welcome h2 {
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.welcome p {
+    color: #8b949e;
+
+    font-size: 15px;
+}
+
+
+/* Footer */
+
+footer {
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 20px 8%;
+
+    border-top: 1px solid #30363d;
+
+    color: #8b949e;
+
+    font-size: 13px;
+
+    background: rgba(13, 17, 23, 0.8);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+
+        text-align: center;
+    }
+}
+
+
+/* ============================= */
+/* Profile Card */
+/* ============================= */
+
+.profile-card {
+    background: rgba(22, 27, 34, 0.85);
+
+    border: 1px solid #30363d;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+    margin-bottom: 40px;
+
+    animation: fadeIn 0.5s ease;
+}
+
+
+/* Profile Image */
+
+.profile-image {
+    width: 130px;
+    height: 130px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #58a6ff;
+
+    padding: 4px;
+
+    background: #0d1117;
+
+    box-shadow:
+        0 0 30px rgba(88, 166, 255, 0.25);
+
+    margin-bottom: 20px;
+}
+
+
+/* Name */
+
+.profile-card h2 {
+    font-size: 30px;
+
+    margin-bottom: 6px;
+}
+
+
+/* Username */
+
+.username {
+    color: #58a6ff;
+
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Bio */
+
+.bio {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #8b949e;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+
+/* ============================= */
+/* Statistics */
+/* ============================= */
+
+.stats {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 30px auto;
+
+    max-width: 600px;
+}
+
+.stats div {
+    flex: 1;
+
+    background: #161b22;
+
+    border: 1px solid #30363d;
+
+    border-radius: 12px;
+
+    padding: 18px 10px;
+
+    transition: 0.3s;
+}
+
+.stats div:hover {
+    border-color: #58a6ff;
+
+    transform: translateY(-4px);
+
+    background: #1c2128;
+}
+
+.stats strong {
+    display: block;
+
+    font-size: 23px;
+
+    margin-bottom: 6px;
+}
+
+.stats span {
+    color: #8b949e;
+
+    font-size: 13px;
+}
+
+
+/* ============================= */
+/* GitHub Profile Button */
+/* ============================= */
+
+.github-button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background: #238636;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.github-button:hover {
+    background: #2ea043;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(46, 160, 67, 0.25);
+}
+
+
+/* ============================= */
+/* Repository Section */
+/* ============================= */
+
+.repositories {
+    margin-top: 30px;
+}
+
+.repositories > h2 {
+    font-size: 26px;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+}
+
+
+/* Repository Grid */
+
+.repo-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* Repository Card */
+
+.repo-card {
+    background: rgba(22, 27, 34, 0.85);
+
+    border: 1px solid #30363d;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+
+    backdrop-filter: blur(10px);
+}
+
+.repo-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #58a6ff;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Repository Name */
+
+.repo-card h3 {
+    color: #58a6ff;
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+
+    word-break: break-word;
+}
+
+
+/* Repository Description */
+
+.repo-card p {
+    color: #8b949e;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    min-height: 42px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Repository Information */
+
+.repo-info {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+}
+
+.repo-info span {
+    color: #c9d1d9;
+
+    font-size: 13px;
+}
+
+
+/* Repository Link */
+
+.repo-card a {
+    color: #58a6ff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.repo-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================= */
+/* Animation */
+/* ============================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ============================= */
+/* Mobile Repository Layout */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .profile-card {
+        padding: 30px 20px;
+    }
+
+    .profile-image {
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-card h2 {
+        font-size: 25px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .repo-list {
+        grid-template-columns: 1fr;
+    }
+
+    .repositories > h2 {
+        text-align: center;
+    }
+
+}
+
+
+
